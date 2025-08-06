@@ -1,0 +1,193 @@
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #fdfdfd;
+  color: #e67e22;
+}
+
+/* Menu Section */
+.menu {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+}
+
+/* Heading */
+.menu .heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: #e67e22;
+  font-weight: 700;
+}
+
+/* Header Buttons */
+.menu-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.menu-header .menu-btn {
+  background: white;
+  color: #e67e22;
+  padding: 10px 20px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border: 2px solid #e67e22;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  margin: 0 10px;
+}
+
+.menu-header .menu-btn:hover,
+.menu-header .menu-btn.active {
+  background: #e67e22;
+  color: white;
+}
+
+/* Menu Row */
+.menu-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Menu Image */
+.menu-image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Menu Info */
+.menu-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.menu-info h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #e67e22;
+}
+
+.menu-info .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e67e22;
+  align-self: flex-end;
+  margin-bottom: 10px;
+}
+
+/* Buy Button */
+.buy-btn {
+  background-color: #e67e22;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: 0.3s;
+}
+
+.buy-btn:hover {
+  background-color: #cf5e0e;
+}
+
+/* Modal Styles */
+#buyMenuModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+}
+
+#buyMenuModal .modal-content {
+  background: white;
+  margin: 5% auto;
+  padding: 20px;
+  max-width: 700px;
+  border-radius: 12px;
+  position: relative;
+}
+
+#buyMenuModal .close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #e67e22;
+  cursor: pointer;
+}
+
+/* Table inside Modal */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+/* Meal Cell Styling */
+.meal-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.meal-cell img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Final Buy Button */
+.final-buy-btn {
+  margin-top: 20px;
+  background-color: #e67e22;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.final-buy-btn:hover {
+  background-color: #cf5e0e;
+}
