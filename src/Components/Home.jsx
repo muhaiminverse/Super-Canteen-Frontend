@@ -1,11 +1,12 @@
-import { Link, useLocation } from "react-router-dom";  // if you want to use Link
+import { Link, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import About from "./About";
 import Menu from "./Menu";
 import Review from "./Review";
 import Contact from "./Contact";
 import MenuPage from "../Pages/MenuPage";
-
+import About from "./About";
+import web2 from '../assets/web2.jpg';
+import { Button } from "./ui/button";
 const Home = ({ addToCart }) => {
   const location = useLocation();
 
@@ -25,32 +26,30 @@ const Home = ({ addToCart }) => {
         <div className="content">
           <h3>SUPER CANTEEN</h3>
           <p>Good food fuels your brain, helping you focus longer and think clearer.</p>
-          {/* If you want to scroll to menu on same page: */}
           <a href="#menu" className="btn">Get your order</a>
-
-          {/* Or if you want to link to a different page */}
-          {/* <Link to="/dmenu" className="btn">Buy Subscription</Link> */}
-          <a href="/dmenu.html" className="btn">Buy Subscription</a>
+          <Link to="/dmenu"  className="btn">Buy Subscription</Link>
         </div>
       </section>
 
       {/* About Section */}
-      <section id="about">
-        <About />
+
+      <section className="about" id="about">
+        <h1 className="heading"><span className="span">about</span> us</h1>
+        <div className="row">
+          <div className="image">
+            <img src={web2} alt="About Us" />
+          </div>
+          <div className="content">
+            <h3>Affordable, Tasty, and Nutritious – The Ultimate Uni Meal Solution</h3>
+            <p>Quick, delicious, and packed with energy—perfect for those back-to-back lectures.</p>
+            <button className="buy-btn" ><Link to="/menu" >See Our Menu</Link></button>
+          </div>
+        </div>
       </section>
 
       {/* Menu Section */}
       <section id="menu">
         <Menu addToCart={addToCart} />
-        
-      </section>
-
-      {/* Best Seller Section */}
-      <section id="best-seller">
-        <h2 style={{ textAlign: "center", color: "rgb(221, 98, 53)" }}>Best Seller</h2>
-        {/* If you want, render best sellers here or inside Menu */}
-        {/* Example: */}
-        {/* <BestSeller addToCart={addToCart} /> */}
       </section>
 
       {/* Review Section */}

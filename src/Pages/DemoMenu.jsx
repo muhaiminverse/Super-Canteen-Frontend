@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import '../dmenu.css';
-// import MenuCard from "./components/MenuCard";
-// import BuyMenuModal from "./components/BuyMenuModal";
 import MenuCard from "../Components/MenuCard";
 import BuyMenuModal from "../Components/BuyMenuModal";
 
+// ✅ Import a modal image (if you want a single package image)
+import web3 from '../assets/MU_logo.jpeg';
 
 const demoMenus = [
   { title: "Menu 1: Healthy Panda", price: 1000 },
@@ -26,7 +26,6 @@ const DemoMenu = ({ addToCart }) => {
     setIsModalOpen(false);
   };
 
-  // Find the selected menu object
   const selectedMenuObj = demoMenus.find(menu => menu.title === selectedMenu);
 
   return (
@@ -53,7 +52,7 @@ const DemoMenu = ({ addToCart }) => {
         <BuyMenuModal
           menuName={selectedMenu}
           price={selectedMenuObj.price}
-          img="/web3.jpeg" // or use a specific image if you have one
+          img={web3} // ✅ This image is passed to addToCart
           onClose={closeModal}
           addToCart={addToCart}
         />

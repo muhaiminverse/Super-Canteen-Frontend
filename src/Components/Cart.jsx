@@ -13,7 +13,6 @@ const Cart = ({ cartItems, removeFromCart }) => {
       return;
     }
     try {
-      
       const accessToken = await getAccessTokenSilently();
       await createCheckoutSession(cartItems, accessToken);
     } catch (error) {

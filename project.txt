@@ -1,0 +1,37 @@
+>node_modules
+>public
+>src
+    |>api
+        |CarApi.jsx
+        |MyUserApi.jsx
+    |>assets
+        | *all images*
+    |>auth
+        |Auth0ProviderWithNavigate.jsx
+    |>Components
+        |>ui
+        |About.jsx
+        |BuyMenuModal.jsx
+        |Cart.jsx
+        |Contact.jsx
+        |Header.jsx
+        |Home.jsx
+        |Menu.jsx
+        |*more components*
+        |Review.jsx
+        |UsernameMenu.jsx
+    |>Layout
+    |>lib
+    |>pages
+        |AuthCallbackPage.jsx
+        |DemoMenu.jsx
+        |MenuPage.jsx
+        |OffersPage.jsx
+    |AppRoutes.jsx
+    |demenu.css
+    |index.css
+    |main.jsx
+    |menu.css
+    |offers.css
+.env
+*rest of the files*

@@ -1,10 +1,11 @@
 
 import '../offers.css';
+import web2 from '../assets/web2.jpg';
 
 const offers = Array(12).fill().map((_, i) => ({
   name: `Thalli Item ${i + 1}`,
   price: 5.0,
-  img: '/web2.jpg',
+  img: web2,
 }));
 
 const OffersPage = ({addToCart}) => {
@@ -25,7 +26,7 @@ const OffersPage = ({addToCart}) => {
               <img src={item.img} alt={item.name} />
             </div>
             <h3>{item.name}</h3>
-            <p>${item.price.toFixed(2)}</p>
+            <p>৳{item.price.toFixed(2)}</p>
             <button className="buy-btn" onClick={() => addToCart(item.name, item.price, item.img)}>
               Buy it
             </button>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import UsernameMenu from "./UsernameMenu";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
+import logo1 from '../assets/MU_logo.jpeg';
 
 const Header = () => {
   const scrollToSection = (e, id) => {
@@ -17,7 +18,7 @@ const Header = () => {
   return (
     <header className="header">
       <a href="#" className="logo">
-        <img src="web3.jpeg" alt="Super Canteen Logo" />
+        <img src={logo1} alt="Super Canteen Logo" />
       </a>
       <nav className="navvar hidden md:block" >
         <Link to="/" >Home</Link>
